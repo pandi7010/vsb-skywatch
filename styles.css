@@ -1,0 +1,123 @@
+body {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: blue;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.app-name {
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+    font-family: cursive;
+}
+
+#weatherIcon {
+    margin: 20px auto;
+    display: block;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 10px;
+    border: none;
+    color: #fff;
+    text-shadow: none;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #f6d365, #fda085);
+    border-image-slice: 1;
+}
+
+.card:nth-child(1) {
+    border-image: linear-gradient(to right, #f6d365, #fda085);
+}
+
+.card:nth-child(2) {
+    border-image: linear-gradient(to right, #a1c4fd, #c2e9fb);
+}
+
+.card:nth-child(3) {
+    border-image: linear-gradient(to right, #ffecd2, #fcb69f);
+}
+
+.card:nth-child(4) {
+    border-image: linear-gradient(to right, #667eea, #764ba2);
+}
+
+.card:nth-child(5) {
+    border-image: linear-gradient(to right, #89f7fe, #66a6ff);
+}
+
+.card:nth-child(6) {
+    border-image: linear-gradient(to right, #d4fc79, #96e6a1);
+}
+
+.card:nth-child(7) {
+    border-image: linear-gradient(to right, #fddb92, #d1fdff);
+}
+
+.card:nth-child(8) {
+    border-image: linear-gradient(to right, #e0c3fc, #8ec5fc);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.card-text {
+    font-weight: 400;
+}
+
+@media (max-width: 767px) {
+    .app-name {
+        font-size: 20px;
+    }
+
+    .card {
+        font-size: 14px;
+    }
+}
+
+.connect {
+    color: greenyellow;
+}
+
+.glowing-icon {
+    animation: glow 1.5s ease-in-out infinite alternate;
+    color: grey; /* Initial color */
+}
+
+.glowing-icon.connected {
+    color: green;
+}
+
+@keyframes glow {
+    0% {
+        color: white;
+        text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green;
+    }
+    100% {
+        color: green;
+        text-shadow: 0 0 20px green, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green, 0 0 80px green;
+    }
+}
